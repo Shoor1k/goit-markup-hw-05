@@ -264,6 +264,12 @@ ul {
   letter-spacing: 0.06em;
   color: var(--main-color-white);
   background-color: var(--hover-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.services-button:hover {
+  background-color: #188ce8;
 }
 /* Селекторы секции преимущества */
 .feature {
@@ -460,6 +466,9 @@ ul {
 .our-clients-list a:hover {
   border: 1px solid #2196f3;
 }
+.our-clients a:hover .our-clients-label {
+  fill: #2196f3;
+}
 
 .our-clients-label {
   width: 170px;
@@ -469,9 +478,7 @@ ul {
 
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.our-clients-label:hover {
-  fill: var(--hover-color);
-}
+
 /* ----Селекторы страницы portfolio.html---- */
 .portfolio-box {
   padding-top: 93px;
@@ -518,16 +525,19 @@ ul {
   width: 370px;
   margin-right: 30px;
   margin-bottom: 30px;
+}
+.portfolio a {
+  display: block;
+  height: 100%;
   border: 1px solid #eeeeee;
 
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.portfolio li:hover {
+.portfolio a:hover {
   box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
     0px 1px 1px rgba(0, 0, 0, 0.12);
 }
-.portfolio li:hover .back-side-card {
+.portfolio a:hover .back-side-card {
   transform: translateY(0%);
 }
 .portfolio li:nth-child(3n) {
